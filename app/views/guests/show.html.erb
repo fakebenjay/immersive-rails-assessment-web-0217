@@ -1,2 +1,11 @@
 <h1><%= @guest.name %></h1>
 <h3><%= @guest.occupation %></h3>
+
+<p><%= link_to "Add Appearance", new_guest_appearance_path(@guest) %></p>
+
+<h2>Appearances</h2>
+<ol>
+<% @guest.appearances.each do |a| %>
+  <li><%= link_to a.episode.date, episode_path(a.episode) %>: <%= a.rating %>/5</li>
+<% end %>
+</ol>

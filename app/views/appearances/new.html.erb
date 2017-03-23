@@ -1,0 +1,7 @@
+<h1>New Appearance for <%= @guest.name %></h1>
+
+<%= form_for [@guest, @appearance] do |f| %>
+  Episode: <%= f.text_field :episode_id %><br />
+  Rating (1-5): <%= f.text_field :rating %><br />
+  <%= f.submit %>
+<% end %>
