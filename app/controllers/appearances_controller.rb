@@ -1,4 +1,5 @@
 class AppearancesController < ApplicationController
+  before_action :login
 
   def new
     @guest = Guest.find(params[:guest_id])
